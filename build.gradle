@@ -33,7 +33,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'org.saikrishna.reactive.learning.App'
+    mainClass = 'org.saikrishna.reactive.learning.Consumer'
 }
 
 tasks.named('test') {

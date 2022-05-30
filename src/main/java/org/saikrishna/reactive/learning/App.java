@@ -9,7 +9,6 @@ import reactor.core.publisher.Flux;
 public class App {
 
     public static void main(String[] args) {
-
         Flux.range(1,10).map(integer -> Faker.instance().name().fullName()).subscribe(System.out::println);
     }
 }
