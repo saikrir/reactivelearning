@@ -3,12 +3,13 @@
  */
 package org.saikrishna.reactive.learning;
 
+import com.github.javafaker.Faker;
 import reactor.core.publisher.Flux;
 
 public class App {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello World!");
+        Flux.range(1,10).map(integer -> Faker.instance().name().fullName()).subscribe(System.out::println);
     }
 }
