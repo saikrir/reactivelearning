@@ -17,6 +17,8 @@ dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:29.0-jre'
     implementation 'org.projectlombok:lombok:1.18.24'
+    implementation 'com.github.javafaker:javafaker:0.15'
+
 
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
@@ -26,6 +28,7 @@ dependencies {
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
 }
 
 application {
