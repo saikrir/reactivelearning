@@ -27,7 +27,8 @@ public class FileReaderService implements Consumer<FluxSink<String>> {
 
 
     public void readLines() {
-        while (scanner.hasNext()) {
+
+        while (scanner.hasNext() && !this.fluxSink.isCancelled()) {
             this.fluxSink.next(scanner.nextLine());
         }
         this.fluxSink.complete();

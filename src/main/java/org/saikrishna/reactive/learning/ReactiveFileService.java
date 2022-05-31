@@ -29,14 +29,10 @@ public class ReactiveFileService {
 
     private static void create(Path filePath) throws FileNotFoundException {
         FileReaderService fileReaderService = new FileReaderService(filePath);
-
-
         fluxCreated(fileReaderService)
                 .subscribe(o -> System.out.println(o),
                         throwable -> System.out.println(throwable.getMessage()),
                         () -> System.out.println("Completed"));
-
-
         fileReaderService.readLines();
     }
 
